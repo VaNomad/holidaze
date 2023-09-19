@@ -1,4 +1,4 @@
-import { Routes as RouterConfig, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Error404 } from "../pages/404/Error404";
 import { Home } from "../pages/home/Home";
 import { Login } from "../pages/login/Login";
@@ -7,9 +7,9 @@ import { UserProfile } from "../pages/userProfile/UserProfile";
 import { VenueDetails } from "../pages/venueDetails/VenueDetails";
 import { VenueList } from "../pages/venueList/VenueList";
 
-export const Routes = () => {
+export const RouterConfig = () => {
   return (
-    <RouterConfig>
+    <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signUp" element={<SignUp />} />
@@ -17,6 +17,6 @@ export const Routes = () => {
       <Route path="/venueDetails" element={<VenueDetails />} />
       <Route path="/venueList" element={<VenueList />} />
       <Route path="*" element={<Error404 />} />
-    </RouterConfig>
+    </Routes>
   );
 };
