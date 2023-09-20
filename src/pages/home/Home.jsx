@@ -1,10 +1,17 @@
-import { Nav } from "../../layout/Nav"
+import { Helmet } from "react-helmet";
+import { Nav } from "../../layout/nav/Nav";
 
 export const Home = () => {
   return (
     <div>
-      <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl">HomePage</h1>
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="Holidaze Home page" />
+      </Helmet>
+      <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl">
+        HomePage
+      </h1>
       <Nav />
     </div>
-  )
-}
+  );
+};
