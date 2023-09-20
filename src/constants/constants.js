@@ -1,4 +1,14 @@
-import { holidazeLogoGreen, holidazeLogoPink, campos, kakim, loiterton, maldives1, maldives2, nickson, pixabay, roseclay, sara } from "../../assets";
+import holidazeLogoGreen from "../assets/vectors/holidazeLogoGreen.png";
+import holidazeLogoPink from "../assets/vectors/holidazeLogoPink.png";
+import campos from "../assets/images/campos.jpg"
+import kakim from "../assets/images/kakim.jpg";
+import loiterton from "../assets/images/loiterton.jpg";
+import maldives1 from "../assets/images/maldives1.jpg";
+import maldives2 from "../assets/images/maldives2.jpg";
+import nickson from "../assets/images/nickson.jpg";
+import pixabay from "../assets/images/pixabay.jpg";
+import roseclay from "../assets/images/roseclay.jpg";
+import sara from "../assets/images/sara.jpg";
 
 export const vectorList = [
   {
@@ -11,7 +21,7 @@ export const vectorList = [
     src: holidazeLogoPink,
     alt: "Holidaze Logo Pink",
   },
-]
+];
 export const imageList = [
   {
     id: 3,
@@ -93,4 +103,4 @@ export const navLinks = [
     id: "logout",
     title: "Log Out",
   },
-]
+];
