@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Nav } from "../nav/Nav";
 import { FiHome } from "react-icons/fi";
 
-const Header = () => {
+export const Header = () => {
   const location = useLocation();
 
   // Conditionally render different navigation content based on the current route
@@ -21,11 +21,11 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <Header>
       {/* Other header content */}
       {renderNav()}
-    </header>
+    </Header>
   );
 };
 
-export default Header;
+
