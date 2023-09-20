@@ -27,8 +27,8 @@ export const NavBar = () => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-purple-600"
-              } hover:text-white cursor-pointer`}
+                active === link.title ? "text-black" : "text-purple-600"
+              } hover:text-black cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
@@ -41,11 +41,11 @@ export const NavBar = () => {
           <img
             src={toggle ? FiXCircle : FiMenu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-[28px] h-[28px] cursor-pointer text-black"
             onClick={() => setToggle(!toggle)}
           />
           {toggle ? null : (
-            <span className="ml-2 text-[1.3rem] font-sen">Menu</span>
+            <span className="ml-2 text-[18px]">Menu</span>
           )}
           <div
             className={`${
@@ -57,8 +57,8 @@ export const NavBar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-white" : "text-secondary"
-                  } text-[16px] font-poppins cursor-pointer font-medium`}
+                    active === link.title ? "text-black" : "text-red"
+                  } text-[16px] cursor-pointer font-medium`}
                   onClick={() => {
                     setActive(link.title);
                     setToggle(!toggle);

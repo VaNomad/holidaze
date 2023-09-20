@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Nav } from "../nav/Nav";
+import { NavBar } from "../nav/NavBar";
 import { FiHome } from "react-icons/fi";
 
 export const Header = () => {
@@ -16,15 +16,15 @@ export const Header = () => {
         </Link>
       );
     } else {
-      return <Nav />;
+      return <NavBar />;
     }
   };
 
   return (
-    <Header>
+    <header>
       {/* Other header content */}
       {renderNav()}
-    </Header>
+    </header>
   );
 };
 

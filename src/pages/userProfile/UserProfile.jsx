@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { Nav } from "../../layout/nav/Nav";
+// import { Nav } from "../../layout/nav/Nav";
 
 export const UserProfile = () => {
   return (
@@ -11,7 +11,7 @@ export const UserProfile = () => {
       <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl">
         userProfilePage
       </h1>
-      <Nav />
+      {/* <Nav /> */}
     </div>
   );
 };

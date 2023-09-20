@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { Nav } from "../../layout/nav/Nav";
+// import { Nav } from "../../layout/nav/Nav";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
@@ -17,7 +17,7 @@ export const Login = () => {
           No account? SignUp here
         </h1>
       </Link>
-      <Nav />
+      {/* <Nav /> */}
     </div>
   );
 };
