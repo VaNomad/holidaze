@@ -6,7 +6,7 @@ export const Home = () => {
     <div>
       <Helmet>
         <title>Home</title>
-        <meta name="description" content="Holidaze Home page" />
+        <meta name="description" content="Holidaze Home" />
       </Helmet>
       <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl">
         HomePage
