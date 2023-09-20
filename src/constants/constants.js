@@ -1,5 +1,3 @@
-import holidazeLogoGreen from "../assets/vectors/holidazeLogoGreen.png";
-import holidazeLogoPink from "../assets/vectors/holidazeLogoPink.png";
 import campos from "../assets/images/campos.jpg"
 import kakim from "../assets/images/kakim.jpg";
 import loiterton from "../assets/images/loiterton.jpg";
@@ -10,18 +8,18 @@ import pixabay from "../assets/images/pixabay.jpg";
 import roseclay from "../assets/images/roseclay.jpg";
 import sara from "../assets/images/sara.jpg";
 
-export const vectorList = [
-  {
-    id: 1,
-    src: holidazeLogoGreen,
-    alt: "Holidaze Logo Green",
-  },
-  {
-    id: 2,
-    src: holidazeLogoPink,
-    alt: "Holidaze Logo Pink",
-  },
-];
+// export const vectorList = [
+//   {
+//     id: 1,
+//     src: holidazeLogoGreen,
+//     alt: "Holidaze Logo Green",
+//   },
+//   {
+//     id: 2,
+//     src: holidazeLogoPink,
+//     alt: "Holidaze Logo Pink",
+//   },
+// ];
 export const imageList = [
   {
     id: 3,

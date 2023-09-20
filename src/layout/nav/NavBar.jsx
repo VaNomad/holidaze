@@ -1,8 +1,9 @@
 import { navLinks } from "../../constants/constants";
 import { FiMenu, FiXCircle  } from "react-icons/fi";
-import { vectorList } from "../../constants/constants";
+// import { vectorList } from "../../constants/constants";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import holidazeLogoGreen from "../../assets/vectors/holidazeLogoGreen.png"
 
 export const NavBar = () => {
   const [active, setActive] = useState("");
@@ -10,15 +11,15 @@ export const NavBar = () => {
 
   return (
     <nav className="w-full flex items-center py-5 fixed">
-      <div>
+      <div className="w-full flex justify-between items-center">
         <Link
           to="/"
-          className="flex items-center"
+          className="flex flex-col justify-end"
           onClick={() => {
             setActive("");
           }}
         >
-          <img src={vectorList.holidazeLogoGreen} alt="logo" />
+          <img src={holidazeLogoGreen} alt="logo" className="w-[100px]" />
         </Link>
 
         {/* Desktop Menu */}
@@ -31,7 +32,7 @@ export const NavBar = () => {
               } hover:text-black cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
@@ -45,7 +46,7 @@ export const NavBar = () => {
             onClick={() => setToggle(!toggle)}
           />
           {toggle ? null : (
-            <span className="ml-2 text-[18px]">Menu</span>
+            <span className="ml-2 text-[18px]"><FiMenu /></span>
           )}
           <div
             className={`${
@@ -64,7 +65,7 @@ export const NavBar = () => {
                     setToggle(!toggle);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a href={`${link.id}`}>{link.title}</a>
                 </li>
               ))}
             </ul>
