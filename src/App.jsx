@@ -1,13 +1,12 @@
-import { Helmet } from "react-helmet";
 import { RouterConfig } from "./routes/Routes";
+import { Header } from "./layout/header/Header";
+import { Footer } from "./layout/footer/Footer";
 
 function App() {
   return (
     <RouterConfig>
-      <Helmet>
-        <title>Holidaze</title>
-        <meta name="description" content="Travel Accommodation"/>
-      </Helmet>
+      <Header />
+      <Footer />
     </RouterConfig>
   );
 }
