@@ -1,6 +1,6 @@
 export const Modal = () => {
-  const openButton = document.querySelector("[data-open-modal]");
-  const closeButton = document.querySelector("[data-close-modal]");
+  // const openButton = document.querySelector("[data-open-modal]");
+  // const closeButton = document.querySelector("[data-close-modal]");
   const modal = document.querySelector("[data-modal]");
 
   const handleOpen = () => {
