@@ -1,6 +1,6 @@
-import { navLinks } from "../assets/constants/constants";
+import { navLinks } from "../../constants/constants";
 import { FiMenu, FiXCircle  } from "react-icons/fi";
-import { vectorList } from "../assets/constants/constants";
+import { vectorList } from "../../constants/constants";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 

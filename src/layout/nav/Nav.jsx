@@ -2,6 +2,10 @@ import { Link } from "react-router-dom"
 import {FiLogIn, FiLogOut, FiUser, FiPlus, FiHome} from "react-icons/fi"
 
 export const Nav = () => {
+  const handleClick = () => {
+    alert("You are now logged out");
+  }
+
   return (
     <nav className="h-screen flex items-center justify-center">
       <ul className="border-[4px] border-purple-700 p-5">
@@ -30,7 +34,7 @@ export const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center" onClick={handleClick}>
             <FiLogOut />
             <h1 className="ms-5">Logout</h1>
           </Link>

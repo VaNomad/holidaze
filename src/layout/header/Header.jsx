@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { Nav } from "./Nav";
-import {FiHome} from "react-icons/fi"
-
+import { Nav } from "../nav/Nav";
+import { FiHome } from "react-icons/fi";
 
 const Header = () => {
   const location = useLocation();
