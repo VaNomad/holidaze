@@ -32,7 +32,7 @@ export const NavBar = () => {
               } hover:text-purple-600 cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`${link.id}`}>{link.title}</a>
+              <Link to={link.id}>{link.title}</Link>
             </li>
           ))}
         </ul>
@@ -43,11 +43,7 @@ export const NavBar = () => {
             className="cursor-pointer text-[24px]"
             onClick={() => setToggle(!toggle)}
           >
-            {toggle ? (
-              <FiXCircle />
-            ) : (
-              <FiMenu />
-            )}
+            {toggle ? <FiXCircle /> : <FiMenu />}
           </span>
           <div
             className={`${
@@ -66,7 +62,7 @@ export const NavBar = () => {
                     setToggle(!toggle);
                   }}
                 >
-                  <a href={`${link.id}`}>{link.title}</a>
+                  <Link to={link.id}>{link.title}</Link>
                 </li>
               ))}
             </ul>
