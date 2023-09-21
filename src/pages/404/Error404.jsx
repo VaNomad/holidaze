@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 import { Layout } from "../../layout/Layout";
 
 export const Error404 = () => {
+
+  console.log("Rendering Error404 component");
   return (
     <Layout>
       <Helmet>
