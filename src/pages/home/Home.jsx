@@ -1,15 +1,16 @@
 import { Helmet } from "react-helmet";
+import { Layout } from "../../layout/Layout";
 
 export const Home = () => {
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>Home</title>
         <meta name="description" content="Holidaze Home" />
       </Helmet>
-      <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl">
+      <h1 className="flex justify-center font-bold text-2xl">
         HomePage
       </h1>
-    </div>
+    </Layout>
   );
 };

@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
-import { Nav } from "../../layout/nav/Nav";
+import { Layout } from "../../layout/Layout";
 
 export const SignUp = () => {
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>Sign Up</title>
         <meta name="description" content="Sign up for a Holidaze account" />
@@ -11,7 +11,6 @@ export const SignUp = () => {
       <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl">
         SignUpPage
       </h1>
-      <Nav />
-    </div>
+    </Layout>
   );
 };

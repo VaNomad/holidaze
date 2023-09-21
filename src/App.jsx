@@ -6,30 +6,23 @@ import { UserProfile } from "./pages/userProfile/UserProfile";
 import { VenueDetails } from "./pages/venueDetails/VenueDetails";
 import { VenueList } from "./pages/venueList/VenueList";
 import { Error404 } from "./pages/404/Error404";
-// import { NavBar } from "./layout/nav/NavBar";
-// import { Nav } from "./layout/nav/Nav";
-import { Header } from "./layout/header/Header";
-import {Footer} from "./layout/footer/Footer"
-// import { Layout } from "./layout/Layout";
-// import { RouterConfig } from "./routes/Routes";
-
+import { Layout } from "./layout/Layout";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Routes>
-        {/* <Route path="/" element={<Layout />} /> */}
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/userprofile" element={<UserProfile />} />
-        <Route path="/venueDetails" element={<VenueDetails />} />
-        <Route path="/venueList" element={<VenueList />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
-      <Footer />
-    </>
+    <div className="bg-blackish min-h-screen text-white">
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/userprofile" element={<UserProfile />} />
+          <Route path="/venueDetails" element={<VenueDetails />} />
+          <Route path="/venueList" element={<VenueList />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </Layout>
+    </div>
   );
 }
 

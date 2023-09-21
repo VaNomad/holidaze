@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <div>
+    <div className="flex justify-center">
       <h1>FooterComponent</h1>
     </div>
   )

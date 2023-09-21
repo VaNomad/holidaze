@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
-// import { Nav } from "../../layout/nav/Nav";
+import { Layout } from "../../layout/Layout";
 
 export const UserProfile = () => {
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>Profile</title>
         <meta name="description" content="Your Holidaze Profile page" />
@@ -11,7 +11,6 @@ export const UserProfile = () => {
       <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl">
         userProfilePage
       </h1>
-      {/* <Nav /> */}
-    </div>
+    </Layout>
   );
 };
