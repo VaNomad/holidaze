@@ -38,16 +38,17 @@ export const NavBar = () => {
         </ul>
 
         {/* Mobile Menu */}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? FiXCircle : FiMenu}
-            alt="menu"
-            className="w-[28px] h-[28px] cursor-pointer text-black"
+        <div className="sm:hidden flex flex-1 justify-end items-center me-[20px]">
+          <span
+            className="w-[28px] h-[28px] cursor-pointer"
             onClick={() => setToggle(!toggle)}
-          />
-          {toggle ? null : (
-            <span className="ml-2 text-[18px]"><FiMenu /></span>
-          )}
+          >
+            {toggle ? (
+              <FiXCircle className="text-black" />
+            ) : (
+              <FiMenu className="text-[18px]" />
+            )}
+          </span>
           <div
             className={`${
               !toggle ? "hidden" : "flex"
