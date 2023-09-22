@@ -16,9 +16,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
-          <Route path="/userprofile" element={<UserProfile />} />
-          <Route path="/venueDetails" element={<VenueDetails />} />
-          <Route path="/venueList" element={<VenueList />} />
+          <Route path="/profile" element={<UserProfile />} />
+          <Route path="/venue/:id" element={<VenueDetails />} />
+          <Route path="/venue" element={<VenueList />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </Layout>
