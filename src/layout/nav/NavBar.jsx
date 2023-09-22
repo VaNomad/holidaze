@@ -55,7 +55,7 @@ export const NavBar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-black" : "text-red"
+                    active === link.title ? "text-white font-semibold" : "text-pink-300"
                   } text-[16px] cursor-pointer font-medium`}
                   onClick={() => {
                     setActive(link.title);

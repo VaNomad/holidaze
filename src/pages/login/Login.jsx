@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { Layout } from "../../layout/Layout";
 
 export const Login = () => {
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Login</title>
         <meta name="description" content="Holidaze Login and sign-up page" />
@@ -17,6 +16,6 @@ export const Login = () => {
           No account? SignUp here
         </h1>
       </Link>
-    </Layout>
+    </>
   );
 };
