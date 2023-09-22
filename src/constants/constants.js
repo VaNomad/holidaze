@@ -70,7 +70,7 @@ export const imageList = [
 
 export const navLinks = [
   {
-    id: "home",
+    id: "/",
     title: "Home",
   },
   {
@@ -78,7 +78,7 @@ export const navLinks = [
     title: "Login",
   },
   {
-    id: "signUp",
+    id: "sign-up",
     title: "Sign Up",
   },
   {
@@ -86,11 +86,11 @@ export const navLinks = [
     title: "Profile",
   },
   {
-    id: "venueAdmin",
+    id: "venue-admin",
     title: "Venue Admin",
   },
   {
-    id: "addVenue",
+    id: "add-venue",
     title: "Add Venue",
   },
   {
