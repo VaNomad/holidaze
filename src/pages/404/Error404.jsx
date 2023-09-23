@@ -8,7 +8,7 @@ export const Error404 = () => {
   return (
     <>
       <Helmet>
-        <title>404</title>
+        <title>Error 404</title>
         <meta name="description" content="This is a broken link"/>
       </Helmet>
       <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl text-pink-300">404</h1>

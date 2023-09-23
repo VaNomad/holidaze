@@ -4,7 +4,7 @@ export const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Holidaze | Home</title>
         <meta name="description" content="Holidaze Home" />
       </Helmet>
       <h1 className="flex justify-center font-bold text-2xl">

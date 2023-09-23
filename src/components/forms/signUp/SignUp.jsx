@@ -4,11 +4,11 @@ export const SignUp = () => {
   return (
     <>
       <Helmet>
-        <title>Sign Up</title>
+        <title>Holidaze [ Create Account</title>
         <meta name="description" content="Sign up for a Holidaze account" />
       </Helmet>
       <h1 className="flex justify-center mb-[100px] mt-4 font-bold text-2xl">
-        Sign Up
+        Create Account
       </h1>
     </>
   );
