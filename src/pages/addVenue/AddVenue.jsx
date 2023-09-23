@@ -7,7 +7,7 @@ export const AddVenue = () => {
         <title>Add Venue</title>
         <meta name="description" content="Upload your own venue for other travelers" />
       </Helmet>
-      <h1>AddVenuePage</h1>
+      <h1>Add Venue</h1>
     </div>
   );
 }
