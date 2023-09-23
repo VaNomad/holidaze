@@ -7,7 +7,7 @@ import { VenueDetails } from "./pages/venueDetails/VenueDetails";
 import { Venues } from "./pages/venueList/VenueList";
 import { Error404 } from "./pages/404/Error404";
 import { Layout } from "./layout/Layout";
-import { AddVenueForm } from "./components/forms/addVenue/AddVenue";
+import { AddVenue } from "./components/forms/addVenue/AddVenue";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="/logout" element={<Home />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/profile" element={<UserProfile />} />
-          <Route path="/add-venue" element={<AddVenueForm />} />
+          <Route path="/add-venue" element={<AddVenue />} />
           <Route path="/venue/:id" element={<VenueDetails />} />
           <Route path="/venues" element={<Venues />} />
           <Route path="*" element={<Error404 />} />

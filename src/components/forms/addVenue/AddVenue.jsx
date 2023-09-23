@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 
-export const AddVenueForm = () => {
+export const AddVenue = () => {
   return (
     <div>
       <Helmet>
@@ -10,7 +10,7 @@ export const AddVenueForm = () => {
           content="Upload your own venue for other travelers"
         />
       </Helmet>
-      <h1 className="flex justify-center font-bold text-2xl">Add Venue Form</h1>
+      <h1 className="flex justify-center font-bold text-2xl">Add Venue</h1>
     </div>
   );
 }
