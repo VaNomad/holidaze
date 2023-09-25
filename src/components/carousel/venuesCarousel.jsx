@@ -1,13 +1,14 @@
 import { Carousel } from "flowbite-react";
-import { GetVenues } from "../../api/calls/GetVenues";
 
-export const VenuesCarousel = () => {
-  const {venues} = GetVenues();
+export const VenuesCarousel = ({ images }) => {
+  if (!images || images.length === 0) {
+    return <div>No images available</div>
+  }
 
   return (
-    <Carousel pauseOnHover className="">
-      {venues.map((image) => (
-        <img key={image.id} src={image.src} alt={image.alt} />
+    <Carousel pauseOnHover>
+      {images.map((image, index) => (
+        <img key={index} src={image} alt={`Venue Image ${index}`} />
       ))}
     </Carousel>
   );
