@@ -1,3 +1,4 @@
+// import { GridLoader } from "react-spinners";
 import { API_BASE_URL } from "../endPoints/endpoints";
 import { useState, useEffect } from "react";
 
@@ -12,7 +13,7 @@ export const FetchVenues = () => {
         setHasError(null);
         setIsLoading(true);
 
-        const response = await fetch(`${API_BASE_URL}/venues?sort=created`);
+        const response = await fetch(`${API_BASE_URL}/venues`);
         const data = await response.json();
         setVenues(data);
 
@@ -26,16 +27,16 @@ export const FetchVenues = () => {
     fetchData();
   }, []);
 
-  // if (loading) {
+  // if (isLoading || !venues) {
   //   return (
-  //     <div>Loading Venues</div>
+  //     <div>
+  //       <GridLoader size={50} color="purple" />
+  //     </div>
   //   );
   // }
 
-  // if (error) {
-  //   return (
-  //     <div>There was an ERROR Loading Venues</div>
-  //   );
+  // if (hasError) {
+  //   return <div>{hasError}</div>;
   // }
 
   return {venues, isLoading, hasError};

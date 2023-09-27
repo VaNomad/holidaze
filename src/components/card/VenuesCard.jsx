@@ -11,11 +11,11 @@ console.log("Venues Card Data:", venues)
   return (
     <div>
       {venues.map((venue) => (
-        <Card key={venue.id} className="bg-gray-600">
+        <Card key={venue.id} venue={venue} className="bg-gray-600">
           <VenuesCarousel images={venue.media} />
           <a href="#">
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              <p>{venue.name}</p>
+              <p>name={venue.name}</p>
             </h5>
           </a>
           <div className="mb-5 mt-2.5 flex items-center">
