@@ -1,11 +1,13 @@
 import { Helmet } from "react-helmet";
+// import { AllVenuesCard } from "../../components/card/AllVenuesCard";
+import { Carousel } from "flowbite-react";
 import { VenuesCard } from "../../components/card/VenuesCard";
 import { VenuesCarousel} from "../../components/carousel/venuesCarousel"
 
 
 export const Home = () => {
   console.log("Venues Card", VenuesCard)
-  console.log("VenuesCarousel", VenuesCarousel)
+  console.log("VenuesCarousel", Carousel)
   return (
     <>
       <Helmet>
