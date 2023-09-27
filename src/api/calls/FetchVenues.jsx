@@ -7,7 +7,7 @@ export const FetchVenues = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function getData() {
+    async function fetchData() {
       try {
         setError(null);
         setLoading(true);
@@ -23,7 +23,7 @@ export const FetchVenues = () => {
       }
     }
 
-    getData();
+    fetchData();
   }, []);
 
   // if (loading) {

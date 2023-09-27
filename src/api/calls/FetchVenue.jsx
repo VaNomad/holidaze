@@ -10,7 +10,7 @@ export const FetchVenue = () => {
   let { id } = useParams();
 
   useEffect(() => {
-    async function getData() {
+    async function fetchData() {
       try {
         setLoading(true)
         setError(false)
@@ -32,8 +32,8 @@ export const FetchVenue = () => {
       }
     }
 
-    getData(`${API_BASE_URL}/venues/${id}`)
-    console.log(getData())
+    fetchData(`${API_BASE_URL}/venues/${id}`)
+    console.log(fetchData())
     
   }, [id])
 
