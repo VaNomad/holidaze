@@ -3,32 +3,38 @@ import { useParams } from "react-router-dom";
 import { API_BASE_URL } from "../endPoints/endpoints";
 import {GridLoader} from "react-spinners"
 
-export const GetVenue = () => {
+export const FetchVenue = () => {
   const [venue, setVenue] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   let { id } = useParams();
 
   useEffect(() => {
-    async function getData(url) {
+    async function getData() {
       try {
         setLoading(true)
         setError(false)
 
-        const response = await fetch(url)
-        const json = await response.json()
+        const response = await fetch(`${API_BASE_URL}/venues/${id}`)
+        if (!response.ok) {
+          throw new Error("FAILES to fetch venue details");
+        }
+        const data = await response.json()
 
-        console.log("Venue Data:", json)
+        console.log("Venue Data:", data)
 
-        setVenue(json)
+        setVenue(data)
       } catch (error) {
-        console.log(error)
+        console.log("Error fetching venue details:", error)
+        setError(true);
       } finally {
         setLoading(false)
       }
     }
 
-    getData(`${API_BASE_URL}/venues/${id}`);
+    getData(`${API_BASE_URL}/venues/${id}`)
+    console.log(getData())
+    
   }, [id])
 
   if (loading || !venue) {
@@ -48,3 +54,4 @@ export const GetVenue = () => {
   return { venue, loading, error };
   
 };
+

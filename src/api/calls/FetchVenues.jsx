@@ -1,7 +1,7 @@
 import { API_BASE_URL } from "../endPoints/endpoints";
 import { useState, useEffect } from "react";
 
-export const GetVenues = () => {
+export const FetchVenues = () => {
   const [venues, setVenues] = useState([]);
   const [loading, setLoading] = useState();
   const [error, setError] = useState(null);

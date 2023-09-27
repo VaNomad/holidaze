@@ -1,10 +1,10 @@
-import { GetVenues } from "../../api/calls/GetVenues"
+import { FetchVenues } from "../../api/calls/FetchVenues"
 import { Card } from "flowbite-react"
 import { ImStarFull } from "react-icons/im"
 import { VenuesCarousel } from "../carousel/venuesCarousel"
 
 export const VenuesCard = () => {
-  const { venues } = GetVenues();
+  const { venues } = FetchVenues();
   
 console.log("Venues Card Data:", venues)
 

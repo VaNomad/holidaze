@@ -1,9 +1,9 @@
 import { GridLoader } from "react-spinners";
-import { GetVenue } from "../../api/calls/GetVenue";
+import { FetchVenue } from "../../api/calls/FetchVenue";
 import { Carousel } from "flowbite-react";
 
 export const VenuesCarousel = () => {
-  const { venue, loading, error } = GetVenue()
+  const { venue, loading, error } = FetchVenue()
   
   if (loading) {
     return (
