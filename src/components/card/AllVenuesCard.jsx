@@ -1,18 +1,18 @@
-import { FetchAllVenues } from "../../api/calls/FetchAllVenues";
+// import { FetchAllVenues } from "../../api/calls/FetchAllVenues";
 import { Card, Carousel } from "flowbite-react";
 import { ImStarFull } from "react-icons/im";
 import { Link } from "react-router-dom";
 
-export const AllVenuesCard = ({ venue }) => {
-  const { venues } = FetchAllVenues();
-  const {id, name, description, media, price, maxGuests, rating, location } = venue
+export const AllVenuesCard = ({ venues }) => {
+  // const { venues } = FetchAllVenues();
+  const {id, name, description, media, price, maxGuests, rating, location } = venues
 
   console.log("Venues Card Data:", venues);
-  console.log("Venue Data:", venue);
+  console.log("Venue Data:", venues);
 
   return (
     <div>
-      <Link to={`/Venues/${id}`}>
+      <Link to={`/venues/${id}`}>
         {venues.map((venue) => (
           <Card key={id} venue={venue} className="bg-gray-600">
             <Carousel>

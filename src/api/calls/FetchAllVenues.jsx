@@ -15,9 +15,13 @@ export async function FetchAllVenues() {
         setIsLoading(true);
 
         const response = await fetch(`${API_BASE_URL}/venues`);
+        console.log(response)
+        // eslint-disable-next-line no-unused-vars
         const data = await response.json();
 
-        setVenues(data);
+        setVenues(venues);
+        console.log("VEnues Data:", data);
+        console.log(setVenues(venues))
         setIsLoading(false);
       } catch (error) {
         console.log("Error fetching venue details:", error);
@@ -28,6 +32,8 @@ export async function FetchAllVenues() {
     }
 
     getData();
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading || !venues) {
@@ -44,9 +50,7 @@ export async function FetchAllVenues() {
 
   return (
     <div>
-      {venues.map((venue) => {
-        return <Card key={venue.id} venue={venue} />;
-      })}
+      <Card key={venues.id} venues={venues} />
     </div>
   );
 }
