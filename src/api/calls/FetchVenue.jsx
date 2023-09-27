@@ -5,15 +5,15 @@ import {GridLoader} from "react-spinners"
 
 export const FetchVenue = () => {
   const [venue, setVenue] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
   let { id } = useParams();
 
   useEffect(() => {
     async function fetchData() {
       try {
-        setLoading(true)
-        setError(false)
+        setIsLoading(true);
+        setHasError(false);
 
         const response = await fetch(`${API_BASE_URL}/venues/${id}`)
         if (!response.ok) {
@@ -26,9 +26,9 @@ export const FetchVenue = () => {
         setVenue(data)
       } catch (error) {
         console.log("Error fetching venue details:", error)
-        setError(true);
+        setHasError(true);
       } finally {
-        setLoading(false)
+        setIsLoading(false);
       }
     }
 
@@ -37,21 +37,19 @@ export const FetchVenue = () => {
     
   }, [id])
 
-  if (loading || !venue) {
+  if (isLoading || !venue) {
     return (
       <div>
         <GridLoader size={50} color="purple" />
       </div>
-    )
+    );
   }
 
-  if (error) {
-    return (
-      <div>{error}</div>
-    )
+  if (hasError) {
+    return <div>{hasError}</div>;
   }
 
-  return { venue, loading, error };
+  return { venue, isLoading, hasError };
   
 };
 

@@ -3,23 +3,23 @@ import { useState, useEffect } from "react";
 
 export const FetchVenues = () => {
   const [venues, setVenues] = useState([]);
-  const [loading, setLoading] = useState();
-  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState();
+  const [hasError, setHasError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        setError(null);
-        setLoading(true);
+        setHasError(null);
+        setIsLoading(true);
 
         const response = await fetch(`${API_BASE_URL}/venues?sort=created`);
         const data = await response.json();
         setVenues(data);
 
-        setLoading(false);
+        setIsLoading(false);
       } catch (error) {
-        setLoading(false);
-        setError(true);
+        setIsLoading(false);
+        setHasError(true);
       }
     }
 
@@ -38,7 +38,7 @@ export const FetchVenues = () => {
   //   );
   // }
 
-  return {venues, loading, error};
+  return {venues, isLoading, hasError};
   
 };
 
