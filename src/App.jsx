@@ -4,7 +4,7 @@ import { Login } from "./pages/login/Login";
 import { SignUp } from "./components/forms/signUp/SignUp";
 import { UserProfile } from "./pages/userProfile/UserProfile";
 import { VenueDetails } from "./pages/venueDetails/VenueDetails";
-import { Venues } from "./pages/venueList/VenueList";
+import { VenueList } from "./pages/venueList/VenueList";
 import { Error404 } from "./pages/404/Error404";
 import { Layout } from "./layout/Layout";
 import { AddVenue } from "./components/forms/addVenue/AddVenue";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/profile" element={<UserProfile />} />
           <Route path="/add-venue" element={<AddVenue />} />
           <Route path="/venue/:id" element={<VenueDetails />} />
-          <Route path="/venues" element={<Venues />} />
+          <Route path="/venues" element={<VenueList />} />
           <Route path="*" element={<Error404 />} />
         </Route>
       </Routes>
