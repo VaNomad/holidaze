@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet";
-import { Api } from "../../api/calls/Api";
-import { API_BASE_URL } from "../../api/endPoints/endpoints";
+import { Api } from "../../api/Api";
+import { API_BASE_URL } from "../../api/endpoints";
 import { GridLoader } from "react-spinners";
 import { ErrorDisplay } from "../../components/ui/messages/ErrorDisplay";
 import { AllVenuesCard } from "../../components/card/AllVenuesCard";
 
-const query = "?sortOrder=desc&sort=created&_owner=true&_bookings=true;";
-const isUrl = API_BASE_URL + query;
+const query = "?sortOrder=desc&sort=created&_owner=true&_bookings=true&limit=10;";
+const isUrl = (`${API_BASE_URL}/venues/${query}`);
 
 export const VenueList = () => {
   const { data, isLoading, hasError, errorDisplay } = Api(isUrl);
