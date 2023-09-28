@@ -19,13 +19,12 @@ export async function FetchAllVenues() {
         // eslint-disable-next-line no-unused-vars
         const data = await response.json();
 
-        setVenues(venues);
+        setVenues(data);
         console.log("VEnues Data:", data);
-        console.log(setVenues(venues))
         setIsLoading(false);
       } catch (error) {
         console.log("Error fetching venue details:", error);
-        setHasError(true);
+        setHasError(error.message);
       } finally {
         setIsLoading(false);
       }
@@ -50,7 +49,9 @@ export async function FetchAllVenues() {
 
   return (
     <div>
-      <Card key={venues.id} venues={venues} />
+      {venues.map((place) => {
+        return <Card key={place.id} place={place} />;
+      })}
     </div>
   );
 }

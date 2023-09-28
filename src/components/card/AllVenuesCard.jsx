@@ -3,18 +3,18 @@ import { Card, Carousel } from "flowbite-react";
 import { ImStarFull } from "react-icons/im";
 import { Link } from "react-router-dom";
 
-export const AllVenuesCard = ({ venues }) => {
+export const AllVenuesCard = ({ place }) => {
   // const { venues } = FetchAllVenues();
-  const {id, name, description, media, price, maxGuests, rating, location } = venues
+  const { id, name, description, media, price, maxGuests, rating, location } =
+    place;
 
-  console.log("Venues Card Data:", venues);
-  console.log("Venue Data:", venues);
+  console.log("Venues Card Data:", place);
 
   return (
     <div>
       <Link to={`/venues/${id}`}>
-        {venues.map((venue) => (
-          <Card key={id} venue={venue} className="bg-gray-600">
+        {place.map((place) => (
+          <Card key={id} place={place} className="bg-gray-600">
             <Carousel>
               {media.map((imgUrl, index) => (
                 <div key={index}>
