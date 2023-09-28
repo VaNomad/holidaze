@@ -1,6 +1,7 @@
 // import { FetchAllVenues } from "../../api/calls/FetchAllVenues";
 import { Card, Carousel } from "flowbite-react";
-import { ImStarFull } from "react-icons/im";
+// import { ImStarFull } from "react-icons/im";
+import { AiTwotoneStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 export const AllVenuesCard = ({ venue }) => {
@@ -28,11 +29,11 @@ export const AllVenuesCard = ({ venue }) => {
             </h5>
           </a>
           <div className="mb-5 mt-2.5 flex items-center">
-            <ImStarFull />
-            <ImStarFull />
-            <ImStarFull />
-            <ImStarFull />
-            <ImStarFull />
+            <AiTwotoneStar className="text-black"/>
+            <AiTwotoneStar className="text-black"/>
+            <AiTwotoneStar className="text-black"/>
+            <AiTwotoneStar className="text-black"/>
+            <AiTwotoneStar className="text-black"/>
             <span className="ml-3 mr-2 rounded bg-cyan-100 px-2.5 py-0.5 text-xs font-semibold text-cyan-800 dark:bg-cyan-200 dark:text-cyan-800">
               <p>{rating}</p>
             </span>
